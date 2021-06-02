@@ -1,0 +1,2062 @@
+/*public: anyone can access it
+static: method can be run without creating an
+instance of the class containing the main method*/
+/*void: method doesen't return any value
+main: the name of method
+println: prints a line of text to the screen
+
+comentario:
+/* this is a comment */
+// comment
+
+/*Variáveis: store data for processing
+types:
+int - for intergers (123 and -456)
+double - for floating point or real numbers with 
+optional decima points and fractional parts in
+fixed or scientific notations, such as 3.9798, -76.97
+string: for text such as "Hello world" - text are
+encloused within double quotes.
+
+String name = "Ana";
+
+char - stands for character and holds a single 
+character.
+booleand - true/false - conditions
+boolean online = true;
+
+
+Input:
+Scanner a object
+import java.util.Scanner;
+Scanner myVar = new Scanner(System.in)
+You can now read in different kinds of input data that the user enters.
+Here are some methods that are available through the Scanner class:
+Read a byte - nextByte()
+Read a short - nextShort()
+Read an int - nextInt()
+Read a long - nextLong()
+Read a float - nextFloat()
+Read a double - nextDouble()
+Read a boolean - nextBoolean()
+Read a complete line - nextLine()
+Read a word - next()
+
+ex: 
+public static void main(String[ ]args) {
+		Scanner myVar = new Scanner(System.in);
+		System.out.println(myVar.nextLine());
+	}
+
+math operators
+
+int x = 6+3;
+
++ add
+- sub
+* mult
+/ div
+% modulo - resto da divisao*/
+
+int sum1 = 50 + 10; 
+int sum2 = sum1 + 66; 
+int sum3 = sum2 + sum2;
+
+int sum1 = 1000 - 10;
+int sum2 = sum1 - 5;
+int sum3 = sum1 - sum2;
+
+int x = 2;
+int y = 4;
+int result = x + y;
+System.out.println(result);
+
+int sum1 = 1000 * 2;
+int sum2 = sum1 * 10;
+int sum3 = sum1 * sum2;
+
+int sum1 = 1000 / 5;
+int sum2 = sum1 / 2;
+int sum3 = sum1 / sum2;
+
+int x = 15; int y = 4;
+int result = x / y;
+System.out.println(result); //3
+
+int value = 23;
+int res = value % 6; 
+System.out.println(res); //res is 5
+
+int z = 8;
+int k = 5;
+int resu = z % k;
+System.out.println(resu); //3
+
+
+NOTE - Increment Operators
+/*provides a more convenient and compact way to
+increase or decrease the value of variable by one.
+ex: x = x + 1; can be simplifield to ++x
+
+Pefix & Postfix
+may be used with bothe the increment and decrement
+operators.
+With prefix form, the operator appears before the operand, 
+while in postfix form, the operator appears after the operand. 
+Below is an explanation of how the two forms work:
+
+Prefix: Increments the variable's value and uses the new 
+value in the expression.*/
+
+int a = 34;
+int b = ++a; //y is 35
+
+/*Postfix: The variable's value is first used in the expression 
+and is then increased.*/
+
+int c = 34;
+int d = c++; 
+System.out.println(d);//y is 34
+
+/*c is first assigned to d, and is then incremented by one. 
+Therefore, c becomes 35, while d is assigned the value of 34.
+
+
+assignment operator (=), which assigns a value to a variable.
+int value = 5;
+
+This assigned the value 5 to a variable called value of type int.
+
+Java provides a number of assignment operators to make it easier to write code.
+Addition and assignment (+=):*/
+int num1 = 4;
+int num2 = 8;
+num2 += num1; //num2 = num2 + num1;
+//num2 is 12 and num1 is 4
+System.out.println(num2);//12
+
+substraction and assignment (-=)
+int n1 = 4;
+int n2 = 8;
+n2 -= n1; //n2 = n2 - n1;
+//n2 is 4 and n1 is 4
+System.out.println(n2);//4
+
+
+/*String concatenation
+The + (plus) operator between strings adds them together to make a new string. 
+This process is called concatenation.
+The resulted string is the first string put together 
+with the second string.
+
+
+Desicions making
+conditionals statements - different actions based
+on different conditions.
+if - else
+
+if (condition) {
+   // executes when the condition is true
+}
+
+Any of the following comparison operators may 
+be used to form the condition:
+
+< less than
+> greater than
+!= not equal to
+== equal to
+<= less than or equal to
+>= greater than or equal to */
+
+int x = 7;
+if (x < 42) {
+  System.out.println("Hi");
+}
+
+/*switch statement tests a variable for 
+equality against a list of values. Each value 
+is called a case, and the variable being switched
+on is checked for each case. */
+
+switch (expression) {
+   case value1 :
+     //Statements
+     break; //optional
+   case value2 :
+     //Statements
+     break; //optional
+    //You can have any number of case statements.
+    default : //Optional
+       //Statements
+}
+
+/*- When the variable being switched on is equal to a case, 
+the statements following that case will execute until a break 
+statement is reached.
+- When a break statement is reached, the switch terminates, and 
+the flow of control jumps to the next line after the switch statement.
+- Not every case needs to contain a break. If no break appears, the 
+flow of control will fall through to subsequent cases until a break 
+is reached.
+
+
+while Loops
+
+
+A loop statement allows to repeatedly execute a statement or group of statements.
+
+A while loop statement repeatedly executes a target statement as long as a given condition is true.
+
+
+For Loop
+
+for (initialization; condition; increment/decrement) {
+   statement(s)
+}
+
+Initialization: Expression executes only once during the beginning of loop
+Condition: Is evaluated each time the loop iterates. The loop executes the statement repeatedly, until this condition returns false.
+Increment/Decrement: Executes after each iteration of the loop. */
+
+for(int x = 1; x <=5; x++){
+  System.out.printl(x);
+}
+
+
+/*This initializes x to the value 1, and repeatedly prints the value of x, 
+until the condition x<=5 becomes false. On each iteration, the statement x++ is executed, 
+incrementing x by one.
+
+You can have any type of condition and any type of increment statements in the for loop.
+The example below prints only the even values between 0 and 10: */
+
+public class Program {
+    public static void main(String[] args) {
+        for(int x=0; x<=10; x=x+2) {
+            System.out.println(x);
+        }
+    }
+}
+
+
+
+NOTE - do...while Loops
+
+
+/*A do...while loop is similar to a while loop, except that a do...while loop 
+is guaranteed to execute at least one time.
+Example:*/
+int x = 1;
+do {
+  System.out.println(x);
+  x++;
+} while (x<5);
+
+/*Notice that the condition appears at the end of the loop, so the statements in the loop execute once before it is tested.
+Even with a false condition, the code will run once.
+Example:*/
+
+int x = 1;
+do {
+  System.out.println(x);
+  x++;
+} while(x < 0);
+
+NOTE - Loop Control Statements
+
+/*The break and continue statements change the loop's execution flow.
+The break statement terminates the loop and transfers execution to the statement immediately following the loop.
+Example:*/
+
+int x = 1;
+
+while(x > 0) {
+  System.out.println(x);
+  if(x==4){
+    break;
+  }
+  x++;
+}
+
+/*The continue statement causes the loop to skip the remainder of its body and then immediately retest its condition prior to reiterating. In other words, it makes the loop skip to its next iteration.
+Example:*/
+
+for(int x=10; x<=40; x=x+10){
+  if(x == 30) {
+   continue;
+  }
+  System.out.println(x);
+}
+
+
+NOTE - Array 
+/*An array is a collection of variables of the same type.
+When you need to store a list of values, such as numbers, you can store them in an array, instead of declaring separate variables for each number.
+
+To declare an array, you need to define the type of the elements with square brackets.
+For example, to declare an array of integers: */
+
+int[ ] arr;
+
+//arr - name of the array
+//int - type of element
+
+int[ ] arr = new int[5];
+
+/*The code above declares an array of 5 integers.
+In an array, the elements are ordered and each has a specific and constant position, which is called an index.
+
+To reference elements in an array, type the name of the array followed by the index position within a pair of square brackets.
+arr[2] = 42;
+This assigns a value of 42 to the element with 2 as its index.
+
+ARRAY LITERAL
+If you already know what values to insert into the array, you can use an array literal.*/
+String[ ] myNames = {"A", "B", "C", "D"};
+System.out.println(myNames[2]);
+
+/*Place the values in a comma-separated list, enclosed in curly braces.
+The code above automatically initializes an array containing 4 elements, and stores the provided values.
+
+ARRAY LENGHT
+You can access the length of an array (the number of elements it stores) via its length property.*/
+int[ ] intArr = new int[5];
+System.out.println(intArr.length);
+
+//The for loop is the most used loop when working with arrays, as we can use the length of the array to determine how many times to run the loop.
+
+int [ ] myArr = {6, 42, 3, 7};
+int sum=0;
+for(int x=0; x<myArr.length; x++){
+  sum += myArr[x];
+}
+System.out.println(sum);
+//58
+
+//In the code above, we declared a variable sum to store the result and assigned it 0.
+//Then we used a for loop to iterate through the array, and added each element's value to the variable.
+
+
+NOTE- Enhanced for Loop
+
+/*The enhanced for loop (sometimes called a "for each" loop) is used to traverse elements in arrays.
+The advantages are that it eliminates the possibility of bugs and makes the code easier to read. */
+
+int[ ] primes = {2, 3, 5, 7};
+for(int t:primes) {
+  System.out.println(t);
+}
+
+/*
+2
+3
+5
+7
+*/
+
+/*The enhanced for loop declares a variable of a type compatible with the elements of the array being accessed. The variable will be available within the for block, and its value will be the same as the current array element.
+So, on each iteration of the loop, the variable t will be equal to the corresponding element in the array.*/
+
+NOTE - Multidimensional Arrays
+
+/*Multidimensional arrays are array that contain other arrays. The two-dimensional array is the most basic multidimensional array.
+To create multidimensional arrays, place each array within its own set of square brackets.
+Example of a two-dimensional array:*/
+int[ ][ ] sample = { {1, 2, 3}, {4, 5, 6} }; 
+
+/*This declares an array with two arrays as its elements.
+To access an element in the two-dimensional array, provide two indexes, one for the array, and another for the element inside that array.
+The following example accesses the first element in the second array of sample. */
+
+int x = sample[1][0]
+System.out.println(x);
+
+//The array's two indexes are called row index and column index.
+
+
+NOTE - Multidimensional Arrays
+
+//You can get and set a multidimensional array's elements using the same pair of square brackets.
+
+int[ ] [ ] myArr = { {1,2,3}, {4}, {5,6,7} };
+myArr[0][2] = 42;
+int x = my Arr[1][0]; //4
+
+//The above two-dimensional array contains three arrays. The first array has three elements, the second has a single element and the last of these has three elements.
+
+int result = 0;
+for (int i = 0; i < 5; i++) {
+  if (i == 3) { 
+     result += 10;
+   } else {
+     result += i;
+   }	
+}
+System.out.println(result); //17
+
+-----------
+import java.util.Scanner;
+
+public class Program
+{
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String text = scanner.nextLine();
+		char[] arr = text.toCharArray();
+		
+		//your code goes here
+		  String rev = "";
+
+         for (char i: arr)
+
+           rev = i + rev;  
+
+          System.out.println(rev);
+	}
+}
+
+//out HELLO
+
+
+NOTE - Object-Orientation
+
+/*Java uses Object-Oriented Programming (OOP), a programming style that is intended to make thinking about programming closer to thinking about the real world.
+In OOP, each object is an independent unit with a unique identity, just as objects in the real world are.
+
+An apple is an object; so is a mug. Each has its unique identity. It's possible to have two mugs that look identical, but they are still separate, unique objects.
+Objects also have characteristics, which are used to describe them.
+For example, a car can be red or blue, a mug can be full or empty, and so on. These characteristics are also called attributes. An attribute describes the current state of an object.
+In the real world, each object behaves in its own way. The car moves, the phone rings, and so on.
+The same applies to objects: behavior is specific to the object's type.
+In summary, in object oriented programming, each object has three dimensions: identity, attributes, and behavior.
+Attributes describe the object's current state, and what the object is capable of doing is demonstrated through the object's behavior.
+Classes
+
+A class describes what the object will be, but is separate from the object itself.
+In other words, classes can be described as blueprints, descriptions, or definitions for an object. You can use the same class as a blueprint for creating multiple objects. The first step is to define the class, which then becomes a blueprint for object creation.
+
+Each class has a name, and each is used to define attributes and behavior.
+Some examples of attributes and behavior:
+
+Attributes:
+name
+height
+wight
+gender
+age
+
+Behavior:
+walk
+run
+jump
+speak
+sleep
+
+In other words, an object is an instance of a class. */
+
+
+NOTE - Methods
+
+/*Methods define behavior. A method is a collection of statements that are grouped together to perform an operation. System.out.println() is an example of a method.
+You can define your own methods to perform your desired tasks.
+Let's consider the following code: */
+
+Class MyClass {
+  static void sayHello(){
+    System.out.println("Hello World!");
+  }
+  public static void main(String[ ] args){
+    sayHello();
+  }
+}
+
+/*The code above declares a method called "sayHello", which prints a text, and then gets called in main.
+* To call a method, type its name and then follow the name with a set of parentheses.*/
+
+
+NOTE - Calling Methods
+ /*You can call a method as many times as necessary.
+When a method runs, the code jumps down to where the method is defined, executes the code inside of it, then goes back and proceeds to the next line.
+*/
+class MyClass {
+  static void sayHello() {
+    System.out.println("Hello World!");
+  }
+  public static void main(String[ ] args) {
+     sayHello();
+     sayHello();
+     sayHello();
+   }
+}
+
+//In cases like the one above, where the same thing is repeated over and over, you can achieve the same result using loops (while or for).
+
+
+NOTE - Method Parameters
+
+/*You can also create a method that takes some data, called parameters, along with it when you call it. Write parameters within the method's parentheses.
+For example, we can modify our sayHello() method to take and output a String parameter. */
+
+class MyClass {
+   static void sayHello(String name) {
+     System.out.println("Hello " + name);
+   }
+   public static void main(String[ ] args) {
+     sayHello("David");
+     sayHello("Amy");
+   }
+}
+
+/*The method above takes a String called name as a parameter, which is used in the method's body. Then, when calling the method, we pass the parameter's value inside the parentheses.
+Methods can take multiple, comma-separated parameters.
+The advantages of using methods instead of simple statements include the following:
+- code reuse: You can write a method once, and use it multiple times, without having to rewrite the code each time.
+- parameters: Based on the parameters passed in, methods can perform various actions. */
+
+public static void main(String[ ] args) {
+   doSomething(4);
+}	 
+static void doSomething(int x) {
+   System.out.println(x*x); 
+}//16
+
+
+NOTE - The Return Type
+
+/*The return keyword can be used in methods to return a value.
+For example, we could define a method named sum that returns the sum of its two parameters.*/
+
+static int sum(int val1, int val2) {
+   return val1 + val2;
+}
+
+/*Notice that in the method definition, we defined the return type before we defined the method name. For our sum method, it is int, as it takes two parameters of the type int and returns their sum, which is also an int.
+The static keyword will be discussed in a future lesson.
+Now, we can use the method in our main.*/
+
+class MyClass {
+  static int sum(int val1. int val2){
+  return avl1+val2;
+}
+
+  public static void main(String[ ] args){
+    int x = sum(2, 5);
+    System.out.prinln(x);
+}
+}
+
+/*As the method returns a value, we can assign it to a variable.
+When you do not need to return any value from your method, use the keyword void.
+Notice the void keyword in the definition of the main method - this means that main does not return anything. */
+
+
+NOTE - The Return Type
+
+/*Take a look at the same code from our previous lesson with explaining comments, so you can better understand how it works: */
+// returns an int value 5
+static int returnFive() {
+  return 5;
+}
+
+// has a parameter
+static void sayHelloTo(String name) {
+  System.out.println("Hello " + name);
+}
+
+// simply prints"Hello World!"
+static void sayHello() {
+  System.out.println("Hello World!");
+}
+
+/*Having gained knowledge of method return types and parameters, let's take another look at the definition of the main method.
+ public static void main(String[ ] args)
+
+This definition indicates that the main method takes an array of Strings as its parameters, and does not return a value.
+
+The Return Type
+
+Let's create a method that takes two parameters of type int and returns the greater one, then call it in main:*/
+
+public static void main(String[ ] args) {
+   int res = max(7, 42);
+   System.out.println(res); //42
+   }
+static int max(int a, int b) {
+  if(a > b) {
+    return a;
+  } else {
+    return b;
+  }
+}
+
+/*A method can have one type of parameter (or parameters) and return another, different type. For example, it can take two doubles and return an int.*/
+
+public static void main(String[ ] args) {
+  int x = 10;
+  int y = myFunc(x);
+  System.out.println(y);
+}
+public static int myFunc(int x) {
+  return x*3;
+}  //30
+
+
+CREATE A CLASS
+Animal.java
+
+public class Animal {
+  void bark() {
+    System.out.println("Woof-Woof");
+  }
+}
+
+/*We declared a bark() method in our Animal class.
+
+* Now, in order to use the class and it's methods, we need to declare an object of that class.*/
+
+
+//CREATE A OBJECT
+//MyClass.Java
+
+class MyClass{
+   public statiic void main(String[ ] args){
+      Animal dog = new Animal();
+      dog.bark();
+   }
+}
+
+/*Now, dog is an object of type Animal. Thus we can call its bark() method, using the name of the object and a dot.
+The dot notation is used to access the object's attributes and methods.
+You have just created your first object!
+
+Defining Attributes
+
+
+A class has attributes and methods. The attributes are basically variables within a class.
+Let's create a class called Vehicle, with its corresponding attributes and methods.*/
+public class Vehicle {
+  int maxSpeed;
+  int wheels;
+  String color;
+  double fuelCapacity;  
+
+  void horn() {
+    System.out.println("Beep!");
+  }  
+}
+
+/*maxSpeed, wheels, color and fuelCapacity are the attributes of our Vehicle class, and horn() is the only method.
+You can define as many attributes and methods as necessary.
+
+
+CREATINF OBJECT
+we can create multiple objects of our Vehicle class, and use the dot syntax to access their attributes and methods.
+*/
+
+class MyClass {
+   public static void main(String[ ] args){
+     Vehicle v1 = new Vehicle();
+     Vehicle v2 = new Vehicle();
+     v1.color = "red";
+     v2.horn()
+   }
+}
+
+
+
+NOTE - Access Modifiers
+
+/*Now let's discuss the public keyword in front of the main method.
+public static void main(String[ ] args)
+
+public is an access modifier, meaning that it is used to set the level of access. You can use access modifiers for classes, attributes, and methods.
+
+For classes, the available modifiers are public or default (left blank), as described below:
+public: The class is accessible by any other class.
+default: The class is accessible only by classes in the same package.
+
+The following choices are available for attributes and methods:
+default: A variable or method declared with no access control modifier is available to any other class in the same package.
+public: Accessible from any other class.
+protected: Provides the same access as the default access modifier, with the addition that subclasses can access protected methods and variables of the superclass (Subclasses and superclasses are covered in upcoming lessons).
+private: Accessible only within the declared class itself.
+
+Example:*/
+public class Vehicle {
+  private int maxSpeed;
+  private int wheels;
+  private String color;
+  private double fuelCapacity;
+
+  public void horn() {
+    System.out.println("Beep!");
+  }
+}
+
+/*It's a best practice to keep the variables within a class private. The variables are accessible and modified using Getters and Setters.
+Tap Continue to learn about Getters and Setters.*/
+
+
+NOTE - Getters & Setters
+
+/*Getters and Setters are used to effectively protect your data, particularly when creating classes. For each variable, the get method returns its value, while the set method sets the value.
+
+Getters start with get, followed by the variable name, with the first letter of the variable name capitalized.
+Setters start with set, followed by the variable name, with the first letter of the variable name capitalized. */
+
+public class Vehicle {
+  private String color;
+
+  // Getter
+  public String getColor() {
+    return color;
+  }
+
+ // Setter
+  public void setColor(String c) {
+    this.color = c;
+  }
+}
+
+/*The getter method returns the value of the attribute.
+The setter method takes a parameter and assigns it to the attribute.
+The keyword this is used to refer to the current object. Basically, this.color is the color attribute of the current object. */
+
+
+
+NOTE - Getters & Setters
+
+//Once our getter and setter have been defined, we can use it in our main
+
+public static void main(String[ ] args){
+   Vehicle v1 = new Vehicle();
+   v1.setColor("Red");
+   System.out.println(v1.getColor());
+}
+
+/*Getters and setters allow us to have control over the values. You may, for example, validate the given value in the setter before actually setting the value.
+Getters and setters are fundamental building blocks for encapsulation, which will be covered in the next module.*/
+
+
+NOTE - Constructors
+
+/*Constructors are special methods invoked when an object is created and are used to initialize them.
+A constructor can be used to provide initial values for object attributes.
+
+- A constructor name must be same as its class name.
+- A constructor must have no explicit return type.*/
+
+public class Vehicle {
+  private String color;
+  Vehicle() {
+     color = "Red";
+  }
+}
+
+
+/*The Vehicle() method is the constructor of our class, so whenever an object of that class is created, the color attribute will be set to "Red".
+A constructor can also take parameters to initialize attributes.*/
+
+public class Vehicle {
+  private String color;
+  Vehicle(String c) {
+    color = c;
+  }
+}
+
+/*You can think of constructors as methods that will set up your class by default, so you don’t need to repeat the same code every time.*/
+
+
+NOTE - Using Constructors
+
+//The constructor is called when you create an object using the new keyword.
+
+public class MyClass {
+  public static void main(String[ ] args) {
+    Vehicle v = new Vehicle("Blue");
+  }
+}
+
+/*This will call the constructor, which will set the color attribute to "Blue".
+Constructors*/
+
+
+//A single class can have multiple constructors with different numbers of parameters.
+//The setter methods inside the constructors can be used to set the attribute values.
+
+public class Vehicle {
+  private String color;
+
+  Vehicle() {
+    this.setColor("Red");
+  }
+  Vehicle(String c) {
+    this.setColor(c);
+  }
+
+  // Setter
+  public void setColor(String c) {
+    this.color = c;
+  }
+}
+
+/*The class above has two constructors, one without any parameters setting the color attribute to a default value of "Red", and another constructor that accepts a parameter and assigns it to the attribute.
+
+Now, we can use the constructors to create objects of our class.*/
+
+//color will be "Red"
+Vhicle v1 = new Vehicle();
+
+//color will be "Green"
+Vehicle v2 = new Vehicle("Green");
+
+/*Java automatically provides a default constructor, so all classes have a constructor, whether one is specifically defined or not.*/
+
+
+NOTE - Value Types
+
+/*Value types are the basic types, and include byte, short, int, long, float, double, boolean, and char.
+These data types store the values assigned to them in the corresponding memory locations.
+So, when you pass them to a method, you basically operate on the variable's value, rather than on the variable itself.*/
+
+public class MyClass {
+   public static void main(String[ ] args) {
+     int x = 5;
+     addOneTo(x);
+     System.out.println(x);
+   }
+   static void addOneTo(int num){
+     num = num + 1;
+   }
+}
+
+/*The method from the example above takes the value of its parameter, which is why the original variable is not affected and 5 remains as its value.*/
+
+NOTE - Reference Types
+
+/*A reference type stores a reference (or address) to the memory location where the corresponding data is stored.
+When you create an object using the constructor, you create a reference variable.
+For example, consider having a Person class defined:*/
+
+public class MyClass {
+  public static void main(String[ ] args) {
+    Person j;
+    j = new Person("John");
+    j.setAge(20);
+    celebrateBirthday(j);
+    System.out.println(j.getAge());
+   }
+  static void celebrateBirthday(Person p) {
+    p.setAge(p.getAge() + 1);
+   }
+}
+
+/*The method celebrateBirthday takes a Person object as its parameter, and increments its attribute.
+Because j is a reference type, the method affects the object itself, and is able to change the actual value of its attribute.
+
+*Arrays and Strings are also reference data types.*/
+
+
+NOTE - The Math Class
+
+/*The JDK defines a number of useful classes, one of them being the Math class, which provides predefined methods for mathematical operations.
+You do not need to create an object of the Math class to use it. To access it, just type in Math. and the corresponding method.
+
+Math.abs() returns the absolute value of its parameter.*/
+
+int a = Math.abs(10); //10
+int b = Math.abs(-20);  //20
+
+Math.ceil() //rounds a floating point value up to the nearest integer value. The rounded value is returned as a double
+
+double c = Math.ceil(7.342);  //8.0
+
+Similarly, Math.floor() //rounds a floating point value down to the nearest integer value.
+
+double f = Math.floor(7.343);  //7.0
+
+Math.max() //returns the largest of its parameters.
+
+int m = Math.max(10, 20);  //2
+
+/*Conversely,*/ Math.min() //returns the smallest parameter.
+
+int m = Math.min(10, 20);  //10
+
+Math.pow() //takes two parameters and returns the first parameter raised to the power of the second parameter.
+
+double p = Math.pow(2, 3); //8.0
+
+/*There are a number of other methods available in the Math class, including:
+sqrt() for square root, sin() for sine, cos() for cosine, and others.*/
+
+
+NOTE - Static
+
+/*When you declare a variable or a method as static, it belongs to the class, rather than to a specific instance. This means that only one instance of a static member exists, even if you create multiple objects of the class, or if you don't create any. It will be shared by all objects.*/
+
+public class Counter {
+  public static int COUNT=0;
+  Counter() {
+    COUNT++;
+  }
+}
+
+/*The COUNT variable will be shared by all objects of that class.
+Now, we can create objects of our Counter class in main, and access the static variable.*/
+
+public class MyClass {
+  public static void main(String[  ] args) {
+     counter c1 = new Counter();
+     Counter c2 = new Counter();
+     System.out.println(Counter.COUNT);
+    }
+}
+
+/*The output is 2, because the COUNT variable is static and gets incremented by one each time a new object of the Counter class is created. In the code above, we created 2 objects.
+You can also access the static variable using any object of that class, such as c1.COUNT.
+
+** It’s a common practice to use upper case when naming a static variable, although not mandatory.
+
+It’s a common practice to use upper case when naming a static variable, although not mandatory.
+
+Now, the horn method can be called without creating an object:*/
+
+public class MyClass{
+   public static void main(String[ ] args) {
+     Vehicle.horn();
+   }
+}
+
+/*Another example of static methods are those of the Math class, which is why you can call them without creating a Math object.
+
+*Also, the main method must always be static.
+
+final
+
+
+Use the final keyword to mark a variable constant, so that it can be assigned only once.*/
+
+class MyClass {
+  public static final double PI = 3.14;
+  public static void main(String[ ] args){
+    System.out.println(PI);
+   }
+}
+
+/*PI is now a constant. Any attempt to assign it a value will cause an error.
+
+*Methods and classes can also be marked final. This serves to restrict methods so that they can't be overridden and classes so that they can't be subclassed.
+These concepts will be covered in the next module.*/
+
+
+NOTE - Packages
+
+/*Packages are used to avoid name conflicts and to control access to classes.
+A package can be defined as a group made up of similar types of classes, along with sub-packages.
+Creating a package in Java is quite easy. Simply right click on your src directory and click New->Package. Give your package a name and click Finish.
+You will notice that the new package appears in the project directory. Now you can move and create classes inside that package. We have moved our Vehicle, Counter and Animal classes to the package samples.
+
+When you move/create a class in your package, the following code will appear at the top of the list of files.
+package samples;
+
+This indicates the package to which the class belongs.
+Now, we need to import the classes that are inside a package in our main to be able to use them.
+The following example shows how to use the Vehicle class of the samples package.*/
+import samples.Vehicle;
+
+class MyClass {
+  public static void main(String[ ] args) {
+    Vehicle v1 = new Vehicle();
+    v1.horn();
+  }
+}
+
+/*Two major results occur when a class is placed in a package. First, the name of the package becomes a part of the name of the class. Second, the name of the package must match the directory structure where the corresponding class file resides.
+Use a wildcard to import all classes in a package.
+For example, import samples.* will import all classes in the samples package.*/
+
+
+NOTE - Encapsulation
+
+/*There are 4 core concepts in OOP: encapsulation, inheritance, polymorphism, and abstraction.
+
+The idea behind encapsulation is to ensure that implementation details are not visible to users. The variables of one class will be hidden from the other classes, accessible only through the methods of the current class. This is called data hiding.
+To achieve encapsulation in Java, declare the class' variables as private and provide public setter and getter methods to modify and view the variables' values. */
+
+class BankAccount {
+  private double balance=0;
+  public void deposit(double x) {
+    if(x > 0) {
+      balance += x;
+    }
+  }
+}
+
+/*This implementation hides the balance variable, enabling access to it only through the deposit method, which validates the amount to be deposited before modifying the variable.
+
+In summary, encapsulation provides the following benefits:
+- Control of the way data is accessed or modified
+- More flexible and easily changed code
+- Ability to change one part of the code without affecting other parts*/
+
+
+NOTE - Inheritance
+
+/*Inheritance is the process that enables one class to acquire the properties (methods and variables) of another. With inheritance, the information is placed in a more manageable, hierarchical order.
+
+The class inheriting the properties of another is the subclass (also called derived class, or child class); the class whose properties are inherited is the superclass (base class, or parent class).
+
+To inherit from a class, use the extends keyword.
+This example shows how to have the class Dog to inherit from the class Animal.*/
+
+class Dog extends Animal {
+ // some code
+}
+
+//Here, Dog is the subclass, and Animal is the superclass.
+
+
+NOTE - Inheritance
+
+/*When one class is inherited from another class, it inherits all of the superclass' non-private variables and methods.
+Example:*/
+class Animal {
+  protected int legs;
+  public void eat() {
+    System.out.println("Animal eats");
+  }
+}
+
+class Dog extends Animal {
+  Dog() {
+    legs = 4;
+  }
+}
+
+/*As you can see, the Dog class inherits the legs variable from the Animal class.
+We can now declare a Dog object and call the eat method of its superclass:*/
+
+class MyClass {
+   public static void main(String[ ] args){
+      Dog d = new Dog();
+      d.eat();
+   }
+}
+
+//Recall the protected access modifier, which makes the members visible only to the subclasses.
+
+
+NOTE - Inheritance
+
+/*Constructors are not member methods, and so are not inherited by subclasses.
+However, the constructor of the superclass is called when the subclass is instantiated.*/
+
+class A {
+  public A() {
+    System.out.println("New A");
+  }
+}
+class B {
+  public B() {
+    System.out.println("New B");
+  }
+}
+class Program {
+  public static void main(String[ ] args) {
+     B obj = new B();
+  }
+}
+/*You can access the superclass from the subclass using the super keyword.
+For example, super.var accesses the var member of the superclass.*/
+
+
+NOTE - Polymorphism
+
+/*Polymorphism, which refers to the idea of "having many forms", occurs when there is a hierarchy of classes related to each other through inheritance.
+A call to a member method will cause a different implementation to be executed, depending on the type of the object invoking the method.
+Here is an example: Dog and Cat are classes that inherit from the Animal class. Each class has its own implementation of the makeSound() method.*/
+
+class Animal {
+  public void makeSound() {
+    System.out.println("Grr...");
+  }
+}
+class Cat extends Animal {
+  public void makeSound() {
+    System.out.println("Meow");
+  }
+}
+class Dog extends Animal {
+  public void makeSound() {
+    System.out.println("Woof");
+  }
+}
+
+//As all Cat and Dog objects are Animal objects, we can do the following in main:
+
+public static void main(String[ ] args) {
+  Animal a = new Dog();
+  Animal b = new Cat();
+}
+
+/*We've created two reference variables of type Animal, and pointed them to the Cat and Dog objects.
+Now, we can call the makeSound() methods.*/
+
+a.makeSounds();
+b.makeSounds();
+
+/*As the reference variable a contains a Dog object, the makeSound() method of the Dog class will be called.
+The same applies to the b variable.
+This demonstrates that you can use the Animal variable without actually knowing that it contains an object of the subclass.
+This is very useful when you have multiple subclasses of the superclass.*/
+
+
+NOTE - Method Overriding
+
+/*As we saw in the previous lesson, a subclass can define a behavior that's specific to the subclass type, meaning that a subclass can implement a parent class method based on its requirement.
+This feature is known as method overriding.*/
+
+class Animal {
+   public void makeSound() {
+     System.out.println("Meow");
+   }
+}
+
+/*In the code above, the Cat class overrides the makeSound() method of its superclass Animal.
+
+Rules for Method Overriding:
+- Should have the same return type and arguments
+- The access level cannot be more restrictive than the overridden method's access level (Example: If the superclass method is declared public, the overriding method in the sub class can be neither private nor protected)
+- A method declared final or static cannot be overridden
+- If a method cannot be inherited, it cannot be overridden
+- Constructors cannot be overridden*/
+
+
+NOTE - Method Overloading
+
+/*When methods have the same name, but different parameters, it is known as method overloading.
+This can be very useful when you need the same method functionality for different types of parameters.
+The following example illustrates a method that returns the maximum of its two parameters.*/
+
+int max(int a, int b) {
+  if(a > b) {
+    return a;
+  }
+  else {
+    return b;
+  }
+}
+
+/*The method shown above will only work for parameters of type integer.
+However, we might want to use it for doubles, as well. For that, you need to overload the max method:*/
+
+double max(double a, double b){
+   if(a>b) {
+     return a;
+   }
+   else {
+     return b;
+   }
+}
+
+
+/*Now, our max method will also work with doubles.
+An overloaded method must have a different argument list; the parameters should differ in their type, number, or both.
+Another name for method overloading is compile-time polymorphism.*/
+
+
+NOTE - Abstraction
+
+/*Data abstraction provides the outside world with only essential information, in a process of representing essential features without including implementation details.
+A good real-world example is a book. When you hear the term book, you don't know the exact specifics, such as the page count, the color, or the size, but you understand the idea, or abstraction, of a book.
+The concept of abstraction is that we focus on essential qualities, rather than the specific characteristics of one particular example.
+
+In Java, abstraction is achieved using abstract classes and interfaces.
+An abstract class is defined using the abstract keyword.
+- If a class is declared abstract it cannot be instantiated (you cannot create objects of that type).
+- To use an abstract class, you have to inherit it from another class.
+- Any class that contains an abstract method should be defined as abstract.
+An abstract method is a method that is declared without an implementation (without braces, and followed by a semicolon): abstract void walk();*/
+
+
+NOTE - Abstract Class
+
+//For example, we can define our Animal class as abstract:
+abstract class Animal {
+  int legs = 0;
+  abstract void makeSound();
+}
+
+//The makeSound method is also abstract, as it has no implementation in the superclass.
+//We can inherit from the Animal class and define the makeSound() method for the subclass:
+
+class Cat extends Animal {
+   public void makeSound() {
+      System.out.println("Meow")
+   }
+}
+
+/*Every Animal makes a sound, but each has a different way to do it. That's why we define an abstract class Animal, and leave the implementation of how they make sounds to the subclasses.
+This is used when there is no meaningful definition for the method in the superclass.*/
+
+
+NOTE - Interfaces
+
+/*An interface is a completely abstract class that contains only abstract methods.
+Some specifications for interfaces:
+- Defined using the interface keyword.
+- May contain only static final variables.
+- Cannot contain a constructor because interfaces cannot be instantiated.
+- Interfaces can extend other interfaces.
+- A class can implement any number of interfaces.
+
+An example of a simple interface:*/
+
+interface Animal {
+  public void eat();
+  public void makeSound();
+}
+
+/*Interfaces have the following properties:
+- An interface is implicitly abstract. You do not need to use the abstract keyword while declaring an interface.
+- Each method in an interface is also implicitly abstract, so the abstract keyword is not needed.
+- Methods in an interface are implicitly public.
+
+A class can inherit from just one superclass, but can implement multiple interfaces!*/
+
+
+NOTE - Interfaces
+
+//Use the implements keyword to use an interface with your class.
+
+interface Animal {
+   public void eat();
+   public void makeSound();
+}
+class Cat implements Animal {
+   public void makeSound() {
+      System.out.println("Meow");
+   }
+   public void eat() {
+      System.out.println("omnomnom");
+   }
+}
+
+//When you implement an interface, you need to override all of its methods.
+
+
+//163 Comments
+NOTE - Type Casting
+
+
+/*Assigning a value of one type to a variable of another type is known as Type Casting.
+
+To cast a value to a specific type, place the type in parentheses and position it in front of the value.*/
+
+int a = (int) 3.14;
+System.out.println(a);
+
+/*The code above is casting the value 3.14 to an integer, with 3 as the resulting value.
+Another example:*/
+
+double a = 42.571;
+int b = (int) a;
+System.out.println(b);
+
+/*Type Casting
+
+For classes, there are two types of casting.
+
+Upcasting
+
+You can cast an instance of a subclass to its superclass.
+Consider the following example, assuming that Cat is a subclass of Animal.
+Animal a = new Cat();
+
+Java automatically upcasted the Cat type variable to the Animal type.
+
+Downcasting
+
+Casting an object of a superclass to its subclass is called downcasting.
+Example:*/
+Animal a = new Cat();
+((Cat)a).makeSound();
+
+/*This will try to cast the variable a to the Cat type and call its makeSound() method.
+Why is upcasting automatic, downcasting manual? Well, upcasting can never fail. But if 
+you have a group of different Animals and want to downcast them all to a Cat, then there's 
+a chance that some of these Animals are actually Dogs, so the process fails.*/
+
+
+NOTE - Anonymous Classes
+
+//Anonymous classes are a way to extend the existing classes on the fly.
+//For example, consider having a class Machine:
+class Machine {
+  public void start() {
+    System.out.println("Starting...");
+  }
+}
+
+//When creating the Machine object, we can change the start method on the fly.
+
+public static void main(String[ ] args) {
+   Machine m = new Machine() {
+     @Override public void start() {
+        System.out.println("Woooooo");
+     }
+   };
+   m.start();
+}
+
+/*After the constructor call, we have opened the curly braces and have overridden the start method's implementation on the fly.
+The @Override annotation is used to make your code easier to understand, because it makes it more obvious when methods are overridden.*/
+
+
+NOTE - Anonymous Classes
+
+/*The modification is applicable only to the current object, and not the class itself. So if we create another object of that class, the start method's implementation will be the one defined in the class.*/
+
+class Machine {
+  public void start() {
+     System.out.println("Starting...");
+  }
+}
+public static void main(String[ ] args) {
+  Machine m1 = new Machine() {
+   @Override public void start() {
+     System.out.println("Woooooo");
+    }
+  };
+  Machine m2 = new Machine();
+  m2.start();
+  }
+
+
+
+NOTE - Inner Classes
+
+/*Java supports nesting classes; a class can be a member of another class.
+Creating an inner class is quite simple. Just write a class within a class. Unlike a class, an inner class can be private. Once you declare an inner class private, it cannot be accessed from an object outside the class.*/
+
+class Robot {
+  int id;
+  Robot(int i) {
+    id = i;
+    Brain b = new Brain();
+    b.think();
+   }
+private class Brain {
+  public void think() {
+    System.out.println(id + " is thinking");
+    }
+  }
+}
+
+/*The class Robot has an inner class Brain. The inner class can access all of the member variables and methods of its outer class, but it cannot be accessed from any outside class.*/
+
+
+NOTE - Comparing Objects
+
+/*Remember that when you create objects, the variables store references to the objects.
+So, when you compare objects using the equality testing operator (==), it actually compares the references and not the object values.*/
+
+class Animal { 
+  String name;
+  Animal(String n){
+    name = n;
+  }
+}
+
+class MyClass {
+  public static void main(String[ ] args) {
+    Animal a1 = new Animal("Robby");
+    Animal a2 = new Animal("Robby");
+    System.out.println(a1 == a2);
+  }
+}
+
+/*Despite having two objects with the same name, the equality testing returns false, because we have two different objects (two different references or memory locations).*/
+
+NOTE - equals()
+
+/*Each object has a predefined equals() method that is used for semantical equality testing.
+But, to make it work for our classes, we need to override it and check the conditions we need.
+There is a simple and fast way of generating the equals() method, other than writing it manually.
+Just right click in your class, go to Source->Generate hashCode() and equals()...*/
+
+class Animal {
+  String name;
+  Animal(String n) {
+    name = n;
+  }
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((name == null) ? 0 : name.hashCode());
+    return result;
+  }
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj)
+      return true;
+    if (obj == null)
+      return false;
+    if (getClass() != obj.getClass())
+      return false;
+    Animal other = (Animal) obj;
+    if (name == null) {
+      if (other.name != null)
+        return false;
+    } else if (!name.equals(other.name))
+      return false;
+    return true;
+  }
+}
+
+/*The automatically generated hashCode() method is used to determine where to store the object internally. Whenever you implement equals, you MUST also implement hashCode.
+We can run the test again, using the equals method:*/
+
+public static void main(String[ ] args) {
+  Animal a1 = new Animal("Robby");
+  Animal a2 = new Animal("Robby");
+  System.out.println(a1.equals(a2));
+}
+
+/*You can use the same menu to generate other useful methods, such as getters and setters for your class attributes.
+
+
+396 Comments
+equals()
+
+
+Each object has a predefined equals() method that is used for semantical equality testing.
+But, to make it work for our classes, we need to override it and check the conditions we need.
+There is a simple and fast way of generating the equals() method, other than writing it manually.
+Just right click in your class, go to Source->Generate hashCode() and equals()...*/
+
+
+class Animal {
+  String name;
+  Animal(String n) {
+    name = n;
+  }
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((name == null) ? 0 : name.hashCode());
+    return result;
+  }
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj)
+      return true;
+    if (obj == null)
+      return false;
+    if (getClass() != obj.getClass())
+      return false;
+    Animal other = (Animal) obj;
+    if (name == null) {
+      if (other.name != null)
+        return false;
+    } else if (!name.equals(other.name))
+      return false;
+    return true;
+  }
+}
+
+/*The automatically generated hashCode() method is used to determine where to store the object internally. Whenever you implement equals, you MUST also implement hashCode.
+We can run the test again, using the equals method:*/
+
+public staic void main(String[ ] args) {
+   Animal a1 = new Animal("Robby");
+   Animal a2 = new Animal("Robby")
+   System.out.println(a1.equals(a1));
+}
+
+//You can use the same menu to generate other useful methods, such as getters and setters for your class attributes.
+
+
+NOTE - Enums
+
+/*An Enum is a special type used to define collections of constants.
+Here is a simple Enum example:*/
+
+enum Rank {
+  SOLDIER,
+  SERGEANT,
+  CAPTAIN
+}
+
+//Note that the values are comma-separated.
+//You can refer to the constants in the enum above with the dot syntax.
+Rank a = Rank.SOLDIER;
+
+//After declaring an Enum, we can check for the corresponding values with, for example, a switch statement.
+
+Rank a = rank.SOLDIER;
+
+switch(a) {
+  case SOLDIER:
+    System.out.println("Soldier says hi!");
+    break;
+  case SERGEANT:
+    System.out.println("Sergeant says Hello!");
+    break;
+  case CAPTaIN:
+    System.out.println("Captain says Welcome!");
+    break;
+}
+
+NOTE - Enums
+
+/*You should always use Enums when a variable (especially a method parameter) can only take one out of a small set of possible values.
+If you use Enums instead of integers (or String codes), you increase compile-time checking and avoid errors from passing in invalid constants, and you document which values are legal to use.
+
+Some sample Enum uses include month names, days of the week, deck of cards, etc.*/
+
+
+NOTE - Java API
+
+/*The Java API is a collection of classes and interfaces that have been written for you to use.
+The Java API Documentation with all of the available APIs can be located on the Oracle website at
+http://docs.oracle.com/javase/7/docs/api/
+Once you locate the package you want to use, you need to import it into your code.
+The package can be imported using the import keyword.
+For example:*/
+import java.awt.*;
+
+/*The awt package contains all of the classes for creating user interfaces and for painting graphics and images.
+The wildcard character (*) is used to import all of the classes in the package.*/
+
+NOTE - Exceptions
+
+/*An exception is a problem that occurs during program execution. Exceptions cause abnormal termination of the program.
+Exception handling is a powerful mechanism that handles runtime errors to maintain normal application flow.
+
+An exception can occur for many different reasons. Some examples:
+- A user has entered invalid data.
+- A file that needs to be opened cannot be found.
+- A network connection has been lost in the middle of communications.
+- Insufficient memory and other issues related to physical resources.
+
+As you can see, exceptions are caused by user error, programmer error, or physical resource issues. However, a well-written program should handle all possible exceptions.*/
+
+
+NOTE - Exception Handling
+
+/*Exceptions can be caught using a combination of the try and catch keywords.
+A try/catch block is placed around the code that might generate an exception.
+Syntax:*/
+
+try {
+  //some code
+} catch (Exception e) {
+  //some code to handle errors
+}
+
+/*A catch statement involves declaring the type of exception you are trying to catch. If an exception occurs in the try block, the catch block that follows the try is checked. If the type of exception that occurred is listed in a catch block, the exception is passed to the catch block much as an argument is passed into a method parameter.
+The Exception type can be used to catch all possible exceptions.
+
+The example below demonstrates exception handling when trying to access an array index that does not exist:*/
+
+public class MyClass {
+  public static void main(String[ ] args) {
+    try {
+      int a[ ] = new int[2];
+      System.out.println(a[5]);
+    } catch (Exception e) {
+      System.out.println("An error occurred");
+    }
+  }
+}
+
+/*Without the try/catch block this code should crash the program, as a[5] does not exist.
+Notice the (Exception e) statement in the catch block - it is used to catch all possible Exceptions.*/
+
+
+NOTE - Throw
+
+/*The throw keyword allows you to manually generate exceptions from your methods. Some of the numerous available exception types include the IndexOutOfBoundsException, IllegalArgumentException, ArithmeticException, and so on.
+For example, we can throw an ArithmeticException in our method when the parameter is 0.*/
+
+int div(int a, int b) throws ArithmeticException{
+    if(b == 0) {
+         throw new AruthmeticException("Division by Zero");
+    } else { 
+      return a/ b; 
+   }
+}
+
+
+/*The throws statement in the method definition defines the type of Exception(s) the method can throw.
+Next, the throw keyword throws the corresponding exception, along with a custom message.
+If we call the div method with the second parameter equal to 0, it will throw an ArithmeticException with the message "Division by Zero".
+Multiple exceptions can be defined in the throws statement using a comma-separated list.*/
+
+
+NOTE - Exception Handling
+
+//A single try block can contain multiple catch blocks that handle different exceptions separately.
+//Example:
+try {
+  //some code
+} catch (ExceptionType1 e1) {
+  //Catch block
+} catch (ExceptionType2 e2) {
+  //Catch block
+} catch (ExceptionType3 e3) {
+  //Catch block
+}
+
+/*All catch blocks should be ordered from most specific to most general.
+Following the specific exceptions, you can use the Exception type to handle all other exceptions as the last catch.
+*/
+
+
+NOTE - Threads
+
+/*Java is a multi-threaded programming language. This means that our program can make optimal use of available resources by running two or more components concurrently, with each component handling a different task.
+You can subdivide specific operations within a single application into individual threads that all run in parallel.
+The following diagram shows the life-cycle of a thread.
+
+There are two ways to create a thread.
+1. Extend the Thread class
+Inherit from the Thread class, override its run() method, and write the functionality of the thread in the run() method.
+Then you create a new object of your class and call it's start method to run the thread.*/
+
+class Loader extends Thread {
+   public void run() {
+     System.out.println("Hello");
+   }
+}
+
+class MyClass {
+   public static void main(String[ ] agrs) {
+     Loader obj = new Loader();
+     obj.start();
+   }
+}
+
+/*As you can see, our Loader class extends the Thread class and overrides its run() method.
+When we create the obj object and call its start() method, the run() method statements execute on a different thread.
+Every Java thread is prioritized to help the operating system determine the order in which to schedule threads. The priorities range from 1 to 10, with each thread defaulting to priority 5. You can set the thread priority with the setPriority() method.*/
+
+
+NOTE - Threads
+
+/*The other way of creating Threads is implementing the Runnable interface.
+Implement the run() method. Then, create a new Thread object, pass the Runnable class to its constructor, and start the Thread by calling the start() method.
+Example:*/
+
+class Loader implements Runnable {
+   public void run() {
+      System.out.println("Hello");
+   }
+}
+class MyClass { 
+   public static void main(String[ ] args) {
+     Thread t = new Thread(new Loader());
+     t.start();
+   }
+}
+
+/*The Thread.sleep() method pauses a Thread for a specified period of time. For example, calling Thread.sleep(1000); pauses the thread for one second. Keep in mind that Thread.sleep() throws an InterruptedException, so be sure to surround it with a try/catch block.
+
+It may seem that implementing the Runnable interface is a bit more complex than extending from the Thread class. However, implementing the Runnable interface is the preferred way to start a Thread, because it enables you to extend from another class, as well.
+
+Types of Exceptions
+There are two exception types, checked and unchecked (also called runtime). The main difference is that checked exceptions are checked when compiled, while unchecked exceptions are checked at runtime.
+As mentioned in our previous lesson, Thread.sleep() throws an InterruptedException. This is an example of a checked exception. Your code will not compile until you've handled the exception.*/
+
+public class MyClass {
+  public static void main(String[ ] args) {
+    try {
+      Thread.sleep(1000);
+    } catch (InterruptedException e) {
+      //some code
+    }
+  }
+}
+
+/*We have seen examples of unchecked exceptions, which are checked at runtime, in previous lessons.
+Example (when attempting to divide by 0):
+
+/*
+Exception in thread "main"
+java.lang.ArithmeticException: / by zero
+  at MyClass.main(MyClass.java:4)
+*/
+
+//It is good to know the Types of Exceptions because they can help you debug your code faster.
+
+
+NOTE - ArrayList
+
+/*The Java API provides special classes to store and manipulate groups of objects.
+One such class is the ArrayList. Standard Java arrays are of a fixed length, which means that after they are created, they cannot expand or shrink.
+On the other hand, ArrayLists are created with an initial size, but when this size is exceeded, the collection is automatically enlarged.
+When objects are removed, the ArrayList may shrink in size. Note that the ArrayList class is in the java.util package, so it's necessary to import it before using it.
+Create an ArrayList as you would any object.*/
+
+import java.util.ArrayList;
+//...
+ArrayList colors = new ArrayList();
+
+//You can optionally specify a capacity and type of objects the ArrayList will hold:
+ArrayList<String> colors = new ArrayList<String>(10);
+
+/*The code above defines an ArrayList of Strings with 10 as its initial size.
+ArrayLists store objects. Thus, the type specified must be a class type. You cannot pass, for example, int as the objects' type. Instead, use the special class types that correspond to the desired value type, such as Integer for int, Double for double, and so on.*/
+
+/*The ArrayList class provides a number of useful methods for manipulating its objects.
+The add() method adds new objects to the ArrayList. Conversely, the remove() method removes objects from the ArrayList.*/
+
+import java.util.ArrayList;
+
+public class MyClass {
+   public static void main(String[ ] args) {
+     ArrayList<String> colors = new ArrayList<String>();
+     color.add("Red");
+     color.add("Blue");
+     color.add("Green");
+     color.add("Orange");
+     color.remove("Green");
+
+     System.out.println(colors);
+   }
+}
+
+/*Other useful methods include the following:
+- contains(): Returns true if the list contains the specified element
+- get(int index): Returns the element at the specified position in the list
+- size(): Returns the number of elements in the list
+- clear(): Removes all of the elements from the list
+
+Note: As with arrays, the indexing starts with 0.*/
+
+
+NOTE - LinkedList
+
+/*The LinkedList is very similar in syntax to the ArrayList.
+You can easily change an ArrayList to a LinkedList by changing the object type.*/
+
+import java.util.LinkedList;
+
+public class MyClass {
+   public static void main(String[ ] args) {
+      LinkedList<String> c = new linkedList<String>();
+      c.add("Red");
+      c.add("Blue");
+      c.add("Green");
+      c.add("Orange");
+      c.remove("Green");
+      System.out.println(c);
+   }
+}
+
+//You cannot specify an initial capacity for the LinkedList.
+
+//LinkedList vs. ArrayList
+
+
+/*The most notable difference between the LinkedList and the ArrayList is in the way they store objects.
+The ArrayList is better for storing and accessing data, as it is very similar to a normal array.
+The LinkedList is better for manipulating data, such as making numerous inserts and deletes.
+
+In addition to storing the object, the LinkedList stores the memory address (or link) of the element that follows it. It's called a LinkedList because each element contains a link to the neighboring element.
+
+You can use the enhanced for loop to iterate over its elements.*/
+
+LinkedList<String> c = new LinkedList<String>();
+c.add("Red");
+c.add("Blue");
+c.add("Green");
+c.add("Orange");
+c.remove("Green");
+
+for(String s: c) {
+   System.out.println(s);
+}
+
+/*Summary:
+- Use an ArrayList when you need rapid access to your data.
+- Use a LinkedList when you need to make a large number of inserts and/or deletes.*/
+
+
+NOTE - HashMap
+
+/*Arrays and Lists store elements as ordered collections, with each element given an integer index.
+HashMap is used for storing data collections as key and value pairs. One object is used as a key (index) to another object (the value).
+The put, remove, and get methods are used to add, delete, and access values in the HashMap.*/
+
+import java.util.HashMap;
+public class MyClass {
+  public static void main(String[ ] args) {
+    HashMap<String, Integer> points = new HashMap<String, Integer>();
+    points.put("Amy", 154);
+    points.put("Dave", 42);
+    points.put("Rob", 733);
+    System.out.println(points.get("Dave"));
+  }
+}
+
+//We have created a HashMap with Strings as its keys and Integers as its values.
+
+/*A HashMap cannot contain duplicate keys. Adding a new item with a key that already exists overwrites the old element.
+The HashMap class provides containsKey and containsValue methods that determine the presence of a specified key or value.
+If you try to get a value that is not present in your map, it returns the value of null.
+null is a special type that represents the absence of a value.*/
+
+
+NOTE - Sets
+
+/*A Set is a collection that cannot contain duplicate elements. It models the mathematical set abstraction.
+One of the implementations of the Set is the HashSet class.*/
+
+import java.util.HashSet;
+
+public class MyClass {
+  public static void main(String[ ] args) {
+    HashSet<String> set = new HashSet<String>();
+    set.add("");   
+    set.add("");
+    set.add("");
+    System.out.println(set);
+  }
+}
+
+//You can use the size() method to get the number of elements in the HashSet.
+
+
+NOTE - LinkedHashSet
+
+/*The HashSet class does not automatically retain the order of the elements as they're added. To order the elements, use a LinkedHashSet, which maintains a linked list of the set's elements in the order in which they were inserted.
+
+What is hashing?
+A hash table stores information through a mechanism called hashing, in which a key's informational content is used to determine a unique value called a hash code.
+So, basically, each element in the HashSet is associated with its unique hash code.
+
+You've learned about the various collection types that are available in Java, including Lists, Maps, and Sets. The choice of which one to use is specific to the data you need to store and manipulate.*/
+
+
+NOTE - Sorting Lists
+
+/*For the manipulation of data in different collection types, the Java API provides a Collections class, which is included in the java.util package.
+One of the most popular Collections class methods is sort(), which sorts the elements of your collection type. The methods in the Collections class are static, so you don't need a Collections object to call them.*/
+
+public class MyClass {
+  public static void main(String[ ]args) {
+    ArrayList<String> animals = new ArrayList<String>();
+    animals.add("tiger");
+    animals.add("cat");
+    animals.add("snake");
+    animals.add("dog");
+  
+    Collections.sort(animals);
+  
+    System.out.println(animals);
+  }
+}
+
+//You can call the sort() methods on different types of Lists, such as Integers.
+
+import java util.ArrayList;
+import java.util.Collections;
+ public class MyClass {
+   public static void main(String[ ] args) {
+      ArrayList<Integer> nums = new ArrayList<Integer>();
+      nums.add(3);
+      nums.add(36);
+      nums.add(73);
+      nums.add(40);
+      nums.add(1);
+
+      Collections.sort(nums);
+      System.out.println(nums);
+  }
+}
+
+/*Other useful methods in the Collections class:
+max(Collection c): Returns the maximum element in c as determined by natural ordering.
+min(Collection c): Returns the minimum element in c as determined by natural ordering.
+reverse(List list): Reverses the sequence in list.
+shuffle(List list): Shuffles (i.e., randomizes) the elements in list.*/
+
+
+NOTE - Iterators
+
+/*An Iterator is an object that enables to cycle through a collection, obtain or remove elements.
+Before you can access a collection through an iterator, you must obtain one. Each of the collection classes provides an iterator() method that returns an iterator to the start of the collection. By using this iterator object, you can access each element in the collection, one element at a time.
+
+The Iterator class provides the following methods:
+hasNext(): Returns true if there is at least one more element; otherwise, it returns false.
+next(): Returns the next object and advances the iterator.
+remove(): Removes the last object that was returned by next from the collection.
+
+The Iterator class must be imported from the java.util package.*/
+
+import java.util.Iterator;
+import java.util.LinkedList;
+
+public class MyClass {
+  public static void main(String[ ] args) }
+  LinkedList<String> animals = new LinkedList<String>();
+  animals.add("fox");
+  animals.add("cat");
+  animals.add("dog");
+  animals.add("rabbit");
+
+  Interator<String> it = animals.iterator();
+  String value = it.next();
+  System.out.println(value);
+}
+}
+
+/*it.next() returns the first element in the list and then moves the iterator on to the next element.
+Each time you call it.next(), the iterator moves to the next element of the list.*/
+
+
+NOTE - Iterators
+
+//Typically, iterators are used in loops. At each iteration of the loop, you can access the corresponding list element.
+
+import java.util.Iterator;
+import java.util.LinkedList;
+
+public class MyClass {
+  public static void main(String[ ] args) {
+    LinkedList<String> animals = new LinkedList<String>();
+    animals.add("fox");
+    animals.add("cat");
+    animals.add("dog");
+    animals.add("rabbit");
+
+    Interator<String> it = animals.iterator();
+    while(it.hasNext()) {
+      String value = it.next();
+      System.out.println(value);
+}
+}
+}
+
+//Here, the while loop determines whether the iterator has additional elements, prints the value of the element, and advances the iterator to the next.
+
+
+NOTE - Working with Files
+
+/*The java.io package includes a File class that allows you to work with files.
+To start, create a File object and specify the path of the file in the constructor.
+import java.io.File;
+...
+File file = new File("C:\\data\\input-file.txt");
+  
+With the exists() method, you can determine whether a file exists.
+import java.io.File;*/
+
+public class MyClass {
+  public static void main(String[ ] args) {
+    File x = new File("C:\\sololearn\\test.txt");
+    if(x.exists()) {
+     System.out.println(x.getName() +  "exists!");
+    }
+    else { 
+     System.out.println("The file does not exist");
+    }
+  }
+}
+
+/*The code above prints a message stating whether or not the file exists at the specified path.
+The getName() method returns the name of the file.
+Note that we used double backslashes in the path, as one backslash should be escaped in the path String.*/
+
+
+NOTE - Reading a File
+
+/*Files are useful for storing and retrieving data, and there are a number of ways to read from a file.
+One of the simplest ways is to use the Scanner class from the java.util package.
+The constructor of the Scanner class can take a File object as input.
+To read the contents of a text file at the path "C:\\sololearn\\test.txt", we would need to create a File object with the corresponding path and pass it to the Scanner object.*/
+try {
+  File x = new File("C:\\sololearn\\test.txt");
+  Scanner sc = new Scanner(x);      
+}
+ catch (FileNotFoundException e) {
+
+}
+
+//We surrounded the code with a try/catch block, because there's a chance that the file may not exist.
+
+
+/*The Scanner class inherits from the Iterator, so it behaves like one.
+We can use the Scanner object's next() method to read the file's contents.*/
+try {
+  File x = new File("C:\\sololearn\\test.txt");
+  Scanner sc = new Scanner(x);
+  while(sc.hasNext()) {
+    System.out.println(sc.next());
+  }
+  sc.close();
+} catch (FileNotFoundException e) {
+  System.out.println("Error");
+}
+
+/*The file's contents are output word by word, because the next() method returns each word separately.
+
+It is always good practice to close a file when finished working with it. One way to do this is to use the Scanner's close() method.*/
+
+
+NOTE - Creating Files
+
+//Formatter, another useful class in the java.util package, is used to create content and write it to files.
+//Example:
+import java.util.Formatter;
+
+public class MyClass {
+   public static void main(String[ ] args) {
+  try {
+    Formatter f = new Formatter("C:\\sololearn\\test.txt");
+  } catch (Exception e) {
+      System.out.println("Error");
+  }
+  }
+}
+
+/*This creates an empty file at the specified path. If the file already exists, this will overwrite it.
+Again, you need to surround the code with a try/catch block, as the operation can fail.*/
+
+
+NOTE - Writing to Files
+
+//Once the file is created, you can write content to it using the same Formatter object's format() method.
+
+import java.util.Formatter;
+
+public class MyClass {
+  public static void main(String[ ] args) {
+ try {
+  Formatter f = new
+Formatter("C:\\sololearn\\test.txt");
+  f.format("%s %s %s", "1", "John", "Smith \r\n");
+  f.format("%s %s %s", "2", "Amy", "Brown \r\n");
+  f.close();
+ } catch (Exception e) {
+   System.out.println("Error");
+ }
+ }
+}
+
+/*The format() method formats its parameters according to its first parameter.
+%s mean a string and get's replaced by the first parameter after the format. The second %s get's replaced by the next one, and so on. So, the format %s %s %s denotes three strings that are separated with spaces.
+Note: \r\n is the newline symbol in Windows.
+The code above creates a file with the following content:*/
+
+1 John Smith 
+2 Amy Brown
+
+//Don't forget to close the file once you're finished writing to it!
+
